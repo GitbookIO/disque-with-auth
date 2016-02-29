@@ -1,3 +1,4 @@
+# VERSION 0.1.0
 FROM richnorth/disque:1.0-rc1
 
 # Create conf directory
@@ -8,6 +9,7 @@ COPY disque-template.conf /usr/local/etc/disque/disque-template.conf
 
 # Copy and run script
 COPY env.sh /env.sh
-RUN /env.sh
+
+ENTRYPOINT [ "/env.sh" ]
 
 CMD [ "disque-server", "/usr/local/etc/disque/disque.conf" ]
