@@ -1,4 +1,4 @@
-# VERSION 0.1.0
+# VERSION 0.1.1
 FROM richnorth/disque:1.0-rc1
 
 # Create conf directory
